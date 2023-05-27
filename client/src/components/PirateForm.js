@@ -17,7 +17,7 @@ const PirateForm = ({model,setModel}) => {
     const navigate=useNavigate()
     const onFormSubmit = (e) => {
         e.preventDefault()
-        axios.post("http://localhost:8000/pirates",{
+        axios.post("http://localhost:8000/api/pirates",{
             name:name,
             imageUrl:img,
             treasureChest:treasureChest,

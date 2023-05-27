@@ -8,7 +8,7 @@ const DisplayOne=({model,setModel})=>{
     const navigate=useNavigate()
 
     useEffect(()=>{
-        axios.get("http://localhost:8000/pirates/"+id)
+        axios.get("http://localhost:8000/api/pirates/"+id)
         .then((res)=>{
             setPirate(res.data.list)
         })
@@ -27,7 +27,7 @@ const DisplayOne=({model,setModel})=>{
         else{
             Data.hookHand=!cng
         }
-        axios.put("http://localhost:8000/pirates/"+id,Data)
+        axios.put("http://localhost:8000/api/pirates/"+id,Data)
         .then((res)=>{
             setPirate(res.data.list)
             console.log(res)})

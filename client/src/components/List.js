@@ -7,7 +7,7 @@ const List = (props) => {
     const navigate=useNavigate()
     console.log(model)
     useEffect(() => {
-        axios.get("http://localhost:8000/pirates")
+        axios.get("http://localhost:8000/api/pirates")
             .then((res) => {
                 const newSortedArray = res.data.list.sort((a, b) => {
                     const name1 = a.name.toLowerCase();
@@ -29,7 +29,7 @@ const List = (props) => {
  
         const newArray=model.filter((item)=> item._id !==id)
         setModel(newArray)
-        axios.delete("http://localhost:8000/pirates/"+id)
+        axios.delete("http://localhost:8000/api/pirates/"+id)
         .then((res)=>{
             console.log(res)
         })

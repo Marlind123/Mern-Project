@@ -1,9 +1,9 @@
 const User = require('../controllers/user.controller');
  
 module.exports = app => {
-    app.post('/pirates', User.createOne);
-    app.get('/pirates', User.findAll);
-    app.get('/pirates/:id', User.findOne);
-    app.put('/pirates/:id', User.UpdateOne);
-    app.delete('/pirates/:id', User.deleteOneAuthor);
+    app.post('/api/pirates', User.createOne);
+    app.get('/api/pirates', User.findAll);
+    app.get('/api/pirates/:id', User.findOne);
+    app.put('/api/pirates/:id', User.UpdateOne);
+    app.delete('/api/pirates/:id', User.deleteOneAuthor);
 }
